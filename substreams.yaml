@@ -19,6 +19,14 @@ binaries:
     file: ./target/wasm32-unknown-unknown/release/substreams.wasm
 
 modules:
+  - name: map_blocks
+    kind: map
+    inputs:
+      - params: string
+      - source: sf.ethereum.type.v2.Block
+    output:
+      type: proto:eth.block_meta.v1.Foo
+
   - name: store_block_meta_start
     kind: store
     updatePolicy: set_if_not_exists

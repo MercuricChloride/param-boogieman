@@ -4,7 +4,7 @@ use substreams::{
 };
 use substreams_database_change::pb::database::{table_change::Operation, DatabaseChanges};
 
-use crate::{block_timestamp::BlockTimestamp, pb::block_meta::BlockMeta};
+use crate::{block_timestamp::BlockTimestamp, pb::eth::block_meta::v1::BlockMeta};
 
 pub fn block_meta_to_database_changes(
     changes: &mut DatabaseChanges,
